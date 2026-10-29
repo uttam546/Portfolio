@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import { useEffect, useRef, useState } from "react";
+import logo from "../../assets/images/uttam-logo.png";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -65,7 +66,8 @@ function Navbar() {
           href="#home"
           onClick={closeMenu}
         >
-          Uttam<span>.</span>
+          <img src={logo} alt="UP logo" className="portfolio-logo"/>
+          <span className="portfolio-brand-name">Uttam Pal<span>.</span></span>
         </a>
 
         <button

@@ -50,3 +50,31 @@
     font-size: 1.8rem;
     line-height: 1;
 }
+
+.portfolio-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  background-color: #f2f4f7;
+  text-decoration: none;
+}
+
+.portfolio-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.portfolio-brand-name {
+  display: inline-block;
+  color: #000;
+  font-weight: 700;
+}
+
+.portfolio-brand-name span {
+  color: #000;
+}
