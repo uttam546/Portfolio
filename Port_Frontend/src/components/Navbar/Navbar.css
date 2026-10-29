@@ -1,0 +1,52 @@
+.portfolio-navbar {
+    z-index: 1030;
+    background: rgba(246, 248, 244, .94);
+    border-bottom: 1px solid rgba(16, 42, 67, .1);
+    backdrop-filter: blur(14px);
+}
+
+.portfolio-brand {
+    color: #102a43;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -.05em;
+}
+
+.portfolio-brand span {
+    color: #ef6c57;
+}
+
+.portfolio-navbar .nav-link {
+    color: #486581;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.portfolio-navbar .nav-link:hover,
+.portfolio-navbar .nav-link:focus {
+    color: #167d91;
+}
+
+.portfolio-nav-cta {
+    border: 1px solid #102a43;
+    color: #102a43;
+    font-weight: 700;
+}
+
+.portfolio-nav-cta:hover {
+    background: #102a43;
+    color: #fff;
+}
+
+.portfolio-navbar .navbar-toggler {
+    border-color: rgba(16, 42, 67, .25);
+}
+
+
+.portfolio-navbar .navbar-close-icon {
+    display: inline-block;
+    color: #102a43;
+    font-size: 1.8rem;
+    line-height: 1;
+}

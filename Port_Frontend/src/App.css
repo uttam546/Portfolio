@@ -1,0 +1,38 @@
+.app-shell {
+  overflow: hidden;
+  background: #f6f8f4;
+  padding-top: 74px;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #ef6c57;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  max-width: 680px;
+  margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+  color: #102a43;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.35rem, 5vw, 4.4rem);
+  letter-spacing: -.04em;
+}
+
+.section-heading h2 span {
+  color: #167d91;
+}
+
+.section-heading p {
+  max-width: 560px;
+  color: #627d98;
+  font-size: 1.05rem;
+}
+   

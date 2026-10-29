@@ -1,0 +1,163 @@
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #eef7ff,
+    #dbeeff
+  );
+
+  padding: 20px;
+}
+
+
+.admin-login-card {
+  width: 100%;
+  max-width: 420px;
+
+  background: #ffffff;
+
+  padding: 45px 40px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0, 70, 140, 0.15);
+
+  text-align: center;
+}
+
+
+.admin-login-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #e5f2ff;
+  color: #0759a8;
+
+  font-size: 28px;
+}
+
+
+.admin-login-card h1 {
+  margin: 0;
+
+  color: #073b70;
+
+  font-size: 30px;
+}
+
+
+.admin-login-card p {
+  margin: 10px 0 30px;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+.admin-login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+.admin-input-group {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 10px;
+
+  padding: 0 15px;
+
+  transition: 0.3s;
+}
+
+
+.admin-input-group:focus-within {
+  border-color: #1677d2;
+
+  box-shadow: 0 0 0 3px rgba(22, 119, 210, 0.1);
+}
+
+
+.admin-input-group svg {
+  color: #1677d2;
+
+  margin-right: 12px;
+}
+
+
+.admin-input-group input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  padding: 14px 0;
+
+  font-size: 15px;
+
+  color: #1e293b;
+
+  background: transparent;
+}
+
+
+.admin-login-button {
+  border: none;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  background: #0759a8;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  transition: 0.3s;
+}
+
+
+.admin-login-button:hover {
+  background: #06427d;
+
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 480px) {
+
+  .admin-login-card {
+    padding: 35px 25px;
+  }
+
+  .admin-login-card h1 {
+    font-size: 26px;
+  }
+}
