@@ -13,7 +13,7 @@ import axios from "axios";
 function Home() {
 	// Submit comment to backend
 	const handleCommentSubmit = async (name, commentText) => {
-		const response = await axios.post("http://localhost:5000/api/comments", { name, text: commentText });
+		const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/comments`, { name, text: commentText });
 		if (!response.data.success) throw new Error("Comment submission failed.");
 		return response.data.comment;
 	};

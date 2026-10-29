@@ -28,7 +28,7 @@ function Hero() {
   // Fetch the current resume from the backend
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/resume")
+      .get(`${import.meta.env.VITE_API_URL}/api/resume`)
       .then((response) => {
         console.log("Resume API response:", response.data);
 

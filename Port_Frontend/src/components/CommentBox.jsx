@@ -15,7 +15,7 @@ const CommentBox = ({ onCommentSubmit }) => {
     const openDrawer = () => setIsOpen(true);
     const fetchComments = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/comments');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/comments`);
         setComments(response.data.comments || []);
       } catch (fetchError) {
         setError('Comments are temporarily unavailable.');

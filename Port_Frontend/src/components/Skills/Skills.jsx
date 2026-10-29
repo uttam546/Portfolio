@@ -42,7 +42,7 @@ function Skills() {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/skills");
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/skills`);
         if (response.data.success && response.data.skills.length > 0) {
           setSkills(response.data.skills);
         }

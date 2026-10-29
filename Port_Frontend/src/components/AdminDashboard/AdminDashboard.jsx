@@ -41,7 +41,7 @@ function AdminDashboard() {
 
   const fetchResume = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/resume");
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/resume`);
       if (response.data.success) {
         setResume(response.data.resume);
       }
@@ -75,7 +75,7 @@ function AdminDashboard() {
       formData.append("resume", resumeFile);
 
       const response = await axios.post(
-        "http://localhost:5000/api/admin/resume",
+        `${import.meta.env.VITE_API_URL}/api/admin/resume`,
         formData,
         {
           headers: {
@@ -112,7 +112,7 @@ function AdminDashboard() {
       setResumeDeleting(true);
       const token = localStorage.getItem("adminToken");
       const response = await axios.delete(
-        "http://localhost:5000/api/admin/resume",
+        `${import.meta.env.VITE_API_URL}/api/admin/resume`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -161,7 +161,7 @@ function AdminDashboard() {
     try {
       const token = localStorage.getItem("adminToken");
       const response = await axios.post(
-        "http://localhost:5000/api/admin/skills",
+        `${import.meta.env.VITE_API_URL}/api/admin/skills`,
         {
           ...skillForm,
           percentage: Number(skillForm.percentage),
@@ -200,7 +200,7 @@ function AdminDashboard() {
     };
 
     const response = await axios.post(
-      "http://localhost:5000/api/admin/projects",
+      `${import.meta.env.VITE_API_URL}/api/admin/projects`,
       projectData,
       {
         headers: {
@@ -250,7 +250,7 @@ function AdminDashboard() {
       const token = localStorage.getItem("adminToken");
 
       const response = await axios.get(
-        "http://localhost:5000/api/admin/messages",
+        `${import.meta.env.VITE_API_URL}/api/admin/messages`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -289,7 +289,7 @@ function AdminDashboard() {
     try {
       const token = localStorage.getItem("adminToken");
       const response = await axios.get(
-        "http://localhost:5000/api/admin/comments",
+        `${import.meta.env.VITE_API_URL}/api/admin/comments`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -313,7 +313,7 @@ function AdminDashboard() {
     const token = localStorage.getItem("adminToken");
 
     const response = await axios.delete(
-      `http://localhost:5000/api/admin/messages/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/admin/messages/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -350,7 +350,7 @@ function AdminDashboard() {
       setDeletingCommentId(id);
       const token = localStorage.getItem("adminToken");
       const response = await axios.delete(
-        `http://localhost:5000/api/admin/comments/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/comments/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -401,7 +401,7 @@ function AdminDashboard() {
   const fetchProjects = async () => {
   try {
     const response = await axios.get(
-      "http://localhost:5000/api/projects"
+      `${import.meta.env.VITE_API_URL}/api/projects`
     );
 
     if (response.data.success) {
@@ -417,7 +417,7 @@ function AdminDashboard() {
 
 const fetchSkills = async () => {
   try {
-    const response = await axios.get("http://localhost:5000/api/skills");
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/skills`);
     if (response.data.success) {
       setSkills(response.data.skills);
     }
@@ -433,7 +433,7 @@ const handleDeleteSkill = async (id) => {
   try {
     const token = localStorage.getItem("adminToken");
     const response = await axios.delete(
-      `http://localhost:5000/api/admin/skills/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/admin/skills/${id}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
 
@@ -473,7 +473,7 @@ const handleUpdateProject = async (e) => {
     };
 
     const response = await axios.put(
-      `http://localhost:5000/api/admin/projects/${editingProject._id}`,
+      `${import.meta.env.VITE_API_URL}/api/admin/projects/${editingProject._id}`,
       projectData,
       {
         headers: {
@@ -510,7 +510,7 @@ const handleDeleteProject = async (id) => {
     const token = localStorage.getItem("adminToken");
 
     const response = await axios.delete(
-      `http://localhost:5000/api/admin/projects/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/admin/projects/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
