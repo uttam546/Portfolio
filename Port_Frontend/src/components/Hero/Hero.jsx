@@ -2,8 +2,8 @@
 import "./Hero.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import heroBackground from "../../assets/images/Neon Eagle in Flight.png";
-import heroPortrait from "../../assets/images/uttam.png";
+import heroBackground from "../../assets/images/Neon Eagle in Flight.webp";
+import heroPortrait from "../../assets/images/uttam.webp";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
 
 const headlineLines = ["सोच में स्पष्टता।", "निर्माण में उत्कृष्टता।"];
