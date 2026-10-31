@@ -2,7 +2,6 @@
 import "./Hero.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import heroBackground from "../../assets/images/Neon Eagle in Flight.webp";
 import heroPortrait from "../../assets/images/uttam.webp";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
 
@@ -119,7 +118,7 @@ function Hero() {
       className="hero"
       id="home"
       style={{
-        "--hero-background": `url("${heroBackground}")`,
+        "--hero-background": `url("/neon-eagle.webp")`,
       }}
     >
       <img
